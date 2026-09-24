@@ -1,46 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth scroll-pt-16 motion-reduce:scroll-auto lg:scroll-pt-20">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Tressto Poultry Farm in Bhanang, Tala, Raigad, Maharashtra supplies fresh eggs for wholesale and retail orders. Contact us for availability, pricing and local supply." />
-  <meta name="theme-color" content="#173b2b" />
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <title>Tressto Poultry Farm | Fresh Eggs – Wholesale &amp; Retail | Bhanang, Tala, Raigad</title>
+  <meta name="description" content="Tressto Poultry Farm in Bhanang, Tala, Raigad, Maharashtra supplies fresh eggs for wholesale and retail orders. Call or WhatsApp for today's availability and pricing." />
+  <meta name="theme-color" content="#0b2118" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="author" content="Tressto Poultry Farm" />
-  <meta name="keywords" content="Tressto Poultry Farm, poultry farm Bhanang, fresh eggs Bhanang, wholesale eggs Tala, retail eggs Raigad, egg supplier Maharashtra, poultry farm Tala" />
+  <link rel="canonical" href="https://toresstopoultryfarm.vercel.app/" />
+
+  <!-- Open Graph / social -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Tressto Poultry Farm | Fresh Eggs • Wholesale & Retail" />
-  <meta property="og:description" content="Fresh eggs and poultry supply from Tressto Poultry Farm in Bhanang, Tala, Raigad, Maharashtra. Wholesale and retail orders." />
-  <meta property="og:image" content="assets/tressto-cover-banner.png" />
-  <meta property="og:image:width" content="2048" />
-  <meta property="og:image:height" content="762" />
+  <meta property="og:site_name" content="Tressto Poultry Farm" />
+  <meta property="og:title" content="Tressto Poultry Farm | Fresh Eggs – Wholesale &amp; Retail" />
+  <meta property="og:description" content="Fresh eggs from Tressto Poultry Farm in Bhanang, Tala, Raigad, Maharashtra. Wholesale and retail orders welcome." />
+  <meta property="og:url" content="https://toresstopoultryfarm.vercel.app/" />
+  <meta property="og:image" content="https://toresstopoultryfarm.vercel.app/assets/images/social/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Rows of hens and fresh eggs inside a Tressto Poultry Farm shed" />
   <meta property="og:locale" content="en_IN" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Tressto Poultry Farm | Fresh Eggs • Wholesale & Retail" />
-  <meta name="twitter:description" content="Fresh eggs and poultry supply from Bhanang, Tala, Raigad, Maharashtra." />
-  <meta name="twitter:image" content="assets/tressto-cover-banner.png" />
-  <title>Tressto Poultry Farm | Fresh Eggs • Wholesale & Retail</title>
-  <link rel="icon" type="image/png" href="assets/tressto-logo.png" />
-  <link rel="preload" as="image" href="assets/farm-09.jpg" fetchpriority="high" />
+  <meta name="twitter:title" content="Tressto Poultry Farm | Fresh Eggs – Wholesale &amp; Retail" />
+  <meta name="twitter:description" content="Fresh eggs from Bhanang, Tala, Raigad, Maharashtra. Wholesale and retail orders welcome." />
+  <meta name="twitter:image" content="https://toresstopoultryfarm.vercel.app/assets/images/social/og-image.jpg" />
 
-  <!-- Tailwind CSS v4 Play CDN — suitable for a standalone HTML prototype/development -->
+  <!-- Icons -->
+  <link rel="icon" href="assets/icons/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png" />
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+
+  <!-- Hero image preload (LCP) -->
+  <link rel="preload" as="image" href="assets/images/hero/farm-hero-layer-shed.jpg"
+        imagesrcset="assets/images/hero/farm-hero-layer-shed-800.jpg 800w, assets/images/hero/farm-hero-layer-shed.jpg 1600w"
+        imagesizes="100vw" fetchpriority="high" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS v4 (browser build). Brand tokens are defined in the @theme block below. -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+      --font-display: "Fraunces", ui-serif, Georgia, serif;
+
+      /* Deep farm green (from the Tressto logo) */
+      --color-forest-50: #eef5f0;
+      --color-forest-100: #d7e8dc;
+      --color-forest-200: #b0d0ba;
+      --color-forest-300: #86b596;
+      --color-forest-500: #2f6b4a;
+      --color-forest-600: #245a3d;
+      --color-forest-700: #1d4a34;
+      --color-forest-800: #173b2b;
+      --color-forest-900: #112e21;
+      --color-forest-950: #0b2118;
+
+      /* Leaf green (logo sub-wordmark) */
+      --color-leaf-400: #8fbb45;
+      --color-leaf-500: #6f9c2c;
+      --color-leaf-600: #557d20;
+
+      /* Sun yellow (logo sun / accent) */
+      --color-sun-200: #fde7a8;
+      --color-sun-300: #fcd46a;
+      --color-sun-400: #f6bd33;
+      --color-sun-500: #e5a412;
+
+      /* Egg-shell neutrals */
+      --color-cream-50: #fcfaf5;
+      --color-cream-100: #f6f1e6;
+      --color-cream-200: #ece3d0;
+      --color-cream-300: #dccfb4;
+    }
+  </style>
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "@id": "https://toresstopoultryfarm.vercel.app/#business",
     "name": "Tressto Poultry Farm",
-    "description": "Poultry farm supplying fresh eggs for wholesale and retail orders.",
+    "description": "Poultry farm in Bhanang, Tala, Raigad supplying fresh eggs for wholesale and retail orders.",
+    "url": "https://toresstopoultryfarm.vercel.app/",
+    "logo": "https://toresstopoultryfarm.vercel.app/assets/images/logo/tressto-emblem.png",
     "image": [
-      "assets/tressto-logo.png",
-      "assets/tressto-cover-banner.png"
+      "https://toresstopoultryfarm.vercel.app/assets/images/social/og-image.jpg",
+      "https://toresstopoultryfarm.vercel.app/assets/images/farm/farm-exterior-signboard.jpg"
     ],
     "telephone": "+91-9869046103",
-    "url": "https://toresstopoultryfarm.vercel.app/",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Bhanang, Tala Road",
+      "streetAddress": "Bhanang, Indapur – Tala Road",
       "addressLocality": "Tala",
       "addressRegion": "Maharashtra",
       "postalCode": "402111",
@@ -51,542 +106,859 @@
       "latitude": 18.267772,
       "longitude": 73.1708836
     },
+    "hasMap": "https://www.google.com/maps?q=18.267772,73.1708836",
     "openingHoursSpecification": [{
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"
-      ],
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
       "opens": "06:00",
       "closes": "20:00"
     }],
     "areaServed": "Maharashtra, India",
-    "sameAs": [
-      "https://wa.me/919869046103"
-    ]
+    "sameAs": ["https://wa.me/919869046103"]
   }
   </script>
-
 </head>
 
-<body class="bg-stone-50 text-stone-900 antialiased selection:bg-amber-200 selection:text-stone-900">
+<body class="overflow-x-hidden bg-cream-50 font-sans text-forest-950 antialiased selection:bg-sun-300 selection:text-forest-950">
 
-  <!-- Header -->
-  <header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#173b2b]/95 text-white shadow-lg backdrop-blur-md">
-    <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10">
-      <a href="#home" class="flex items-center">
-        <img src="assets/tressto-logo.png"
-             alt="Tressto Poultry Farm logo"
-             class="h-12 w-auto rounded-xl bg-white px-2 py-1 shadow-md sm:h-14"
-             width="1953" height="805"
-             decoding="async" />
+  <!-- Reusable icons -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="hidden" aria-hidden="true">
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2Z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 5-8 12-8 12s-8-7-8-12a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></g></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></g></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.14v13.72a1 1 0 0 0 1.52.85l11.1-6.86a1 1 0 0 0 0-1.7L9.52 4.29A1 1 0 0 0 8 5.14Z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.2 7.5 9.5 4.3-1.3 7.5-4.9 7.5-9.5V6L12 3Z"/><path d="m8.8 12 2.2 2.2 4.3-4.4"/></g></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10Z"/><path d="M2 21c0-3 1.9-5.4 5.2-6.1 2.4-.5 4.8-2 5.8-3.9"/></g></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 8 5-3 5 3-1.5-8"/></g></symbol>
+    <symbol id="i-boxes" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5 12 4l9 4.5-9 4.5-9-4.5Z"/><path d="M3 8.5v7L12 20l9-4.5v-7M12 13v7"/></g></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-chev-left" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m15 5-7 7 7 7"/></symbol>
+    <symbol id="i-chev-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m9 5 7 7-7 7"/></symbol>
+  </svg>
+
+  <a href="#main" class="sr-only z-[60] rounded-full bg-sun-400 px-5 py-3 font-bold text-forest-950 focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Skip to content</a>
+
+  <!-- ============================== HEADER ============================== -->
+  <header id="siteHeader" data-scrolled="false" data-menu="closed"
+          class="fixed inset-x-0 top-0 z-50 text-white transition-[background-color,box-shadow] duration-300 data-[menu=open]:bg-forest-950 data-[scrolled=true]:bg-forest-950/95 data-[scrolled=true]:shadow-[0_8px_30px_-12px_rgba(0,0,0,0.45)] data-[scrolled=true]:backdrop-blur-md">
+    <div class="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:h-20 lg:px-8">
+      <a href="#home" class="flex shrink-0 items-center gap-2.5" aria-label="Tressto Poultry Farm – back to top">
+        <img src="assets/images/logo/tressto-emblem-192.png" alt="" width="192" height="192"
+             class="size-10 rounded-full bg-white p-0.5 shadow-md ring-1 ring-white/30 lg:size-12" />
+        <span class="leading-none">
+          <span class="block font-display text-xl font-semibold tracking-tight lg:text-2xl">Tressto</span>
+          <span class="mt-0.5 block text-[0.625rem] font-bold uppercase tracking-[0.22em] text-sun-300 lg:text-[0.6875rem]">Poultry Farm</span>
+        </span>
       </a>
 
-      <nav class="hidden items-center gap-8 text-sm font-semibold lg:flex">
-        <a class="transition hover:text-amber-300" href="#home">Home</a>
-        <a class="transition hover:text-amber-300" href="#about">About</a>
-        <a class="transition hover:text-amber-300" href="#products">Products</a>
-        <a class="transition hover:text-amber-300" href="#gallery">Gallery</a>
-        <a class="transition hover:text-amber-300" href="#contact">Contact</a>
+      <nav aria-label="Main" class="hidden items-center gap-1 lg:flex">
+        <a href="#about" class="rounded-full px-3.5 py-2 text-sm font-semibold text-white/85 transition hover:bg-white/10 hover:text-white">About</a>
+        <a href="#supply" class="rounded-full px-3.5 py-2 text-sm font-semibold text-white/85 transition hover:bg-white/10 hover:text-white">Supply</a>
+        <a href="#farm" class="rounded-full px-3.5 py-2 text-sm font-semibold text-white/85 transition hover:bg-white/10 hover:text-white">Our Farm</a>
+        <a href="#videos" class="rounded-full px-3.5 py-2 text-sm font-semibold text-white/85 transition hover:bg-white/10 hover:text-white">Videos</a>
+        <a href="#gallery" class="rounded-full px-3.5 py-2 text-sm font-semibold text-white/85 transition hover:bg-white/10 hover:text-white">Gallery</a>
+        <a href="#contact" class="rounded-full px-3.5 py-2 text-sm font-semibold text-white/85 transition hover:bg-white/10 hover:text-white">Contact</a>
       </nav>
 
-      <div class="hidden items-center gap-3 sm:flex">
-        <a href="tel:+919869046103" class="rounded-full border border-white/20 px-4 py-2 text-sm font-bold transition hover:border-amber-300 hover:text-amber-300">
-          Call Us
+      <div class="flex items-center gap-2">
+        <a href="tel:+919869046103"
+           class="hidden items-center gap-2 rounded-full border border-white/25 px-4 py-2.5 text-sm font-bold transition hover:border-sun-300 hover:text-sun-300 md:inline-flex">
+          <svg class="size-4" aria-hidden="true"><use href="#i-phone"/></svg>
+          <span>098690 46103</span>
         </a>
-        <a href="https://wa.me/919869046103" target="_blank" rel="noopener noreferrer"
-           class="rounded-full bg-amber-400 px-5 py-2.5 text-sm font-extrabold text-[#173b2b] shadow-sm transition hover:bg-amber-300">
-          WhatsApp
+        <a href="https://wa.me/919869046103?text=Hello%20Tressto%20Poultry%20Farm%2C%20I%20would%20like%20to%20enquire%20about%20eggs."
+           target="_blank" rel="noopener noreferrer"
+           class="hidden items-center gap-2 rounded-full bg-sun-400 px-5 py-2.5 text-sm font-extrabold text-forest-950 shadow-sm transition hover:bg-sun-300 sm:inline-flex">
+          <svg class="size-4" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+          <span>Enquire</span>
         </a>
+        <button id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"
+                class="grid size-11 place-items-center rounded-full border border-white/20 transition hover:bg-white/10 lg:hidden">
+          <svg id="menuIconOpen" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg id="menuIconClose" class="hidden size-5" aria-hidden="true"><use href="#i-close"/></svg>
+        </button>
       </div>
-
-      <button id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false"
-              class="rounded-xl border border-white/15 p-2.5 lg:hidden">
-        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M4 7h16M4 12h16M4 17h16"/>
-        </svg>
-      </button>
     </div>
 
     <!-- Mobile menu -->
-    <div id="mobileMenu" class="hidden border-t border-white/10 bg-[#173b2b] px-5 pb-5 pt-3 lg:hidden">
-      <nav class="grid gap-1 text-sm font-semibold">
-        <a class="rounded-xl px-4 py-3 hover:bg-white/10" href="#home">Home</a>
-        <a class="rounded-xl px-4 py-3 hover:bg-white/10" href="#about">About</a>
-        <a class="rounded-xl px-4 py-3 hover:bg-white/10" href="#products">Products</a>
-        <a class="rounded-xl px-4 py-3 hover:bg-white/10" href="#gallery">Gallery</a>
-        <a class="rounded-xl px-4 py-3 hover:bg-white/10" href="#contact">Contact</a>
+    <div id="mobileMenu" class="hidden max-h-[calc(100svh-4rem)] overflow-y-auto border-t border-white/10 bg-forest-950 lg:hidden">
+      <nav aria-label="Mobile" class="mx-auto grid max-w-7xl gap-1 px-4 pb-4 pt-3 sm:px-6">
+        <a href="#about" class="flex items-center justify-between rounded-2xl px-4 py-3.5 text-base font-semibold hover:bg-white/5">About <svg class="size-4 text-sun-300" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a href="#supply" class="flex items-center justify-between rounded-2xl px-4 py-3.5 text-base font-semibold hover:bg-white/5">Wholesale &amp; Retail Supply <svg class="size-4 text-sun-300" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a href="#farm" class="flex items-center justify-between rounded-2xl px-4 py-3.5 text-base font-semibold hover:bg-white/5">Our Farm <svg class="size-4 text-sun-300" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a href="#videos" class="flex items-center justify-between rounded-2xl px-4 py-3.5 text-base font-semibold hover:bg-white/5">Videos <svg class="size-4 text-sun-300" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a href="#gallery" class="flex items-center justify-between rounded-2xl px-4 py-3.5 text-base font-semibold hover:bg-white/5">Gallery <svg class="size-4 text-sun-300" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a href="#contact" class="flex items-center justify-between rounded-2xl px-4 py-3.5 text-base font-semibold hover:bg-white/5">Location &amp; Contact <svg class="size-4 text-sun-300" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <div class="mt-3 grid grid-cols-2 gap-2 border-t border-white/10 pt-4">
+          <a href="tel:+919869046103" class="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/20 px-4 py-3.5 font-bold">
+            <svg class="size-4" aria-hidden="true"><use href="#i-phone"/></svg> Call
+          </a>
+          <a href="https://wa.me/919869046103?text=Hello%20Tressto%20Poultry%20Farm%2C%20I%20would%20like%20to%20enquire%20about%20eggs."
+             target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center justify-center gap-2 rounded-2xl bg-sun-400 px-4 py-3.5 font-extrabold text-forest-950">
+            <svg class="size-4" aria-hidden="true"><use href="#i-whatsapp"/></svg> WhatsApp
+          </a>
+        </div>
+        <p class="px-1 pt-3 text-center text-xs text-white/50">Open daily · 6:00 AM – 8:00 PM</p>
       </nav>
-      <div class="mt-3 grid grid-cols-2 gap-2">
-        <a href="tel:+919869046103" class="rounded-xl border border-white/15 px-4 py-3 text-center font-bold">Call</a>
-        <a href="https://wa.me/919869046103" target="_blank" rel="noopener noreferrer"
-           class="rounded-xl bg-amber-400 px-4 py-3 text-center font-extrabold text-[#173b2b]">WhatsApp</a>
-      </div>
     </div>
   </header>
 
-  <main>
+  <main id="main">
 
-    <!-- Hero -->
-    <section id="home" class="relative isolate overflow-hidden bg-[#102f23] pt-20">
-      <div class="absolute inset-0">
-        <img
-          src="assets/farm-09.jpg"
-          alt="Tressto Poultry Farm chickens inside the poultry shed"
-          class="h-full w-full object-cover object-center opacity-45"
-          width="720" height="1280" fetchpriority="high"
-        />
-        <div class="absolute inset-0 bg-gradient-to-r from-[#102f23] via-[#102f23]/85 to-[#102f23]/35"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-[#102f23] via-transparent to-[#102f23]/30"></div>
-      </div>
+    <!-- ============================== HERO ============================== -->
+    <section id="home" class="relative isolate flex min-h-[100svh] flex-col overflow-hidden bg-forest-950 text-white">
+      <img src="assets/images/hero/farm-hero-layer-shed.jpg"
+           srcset="assets/images/hero/farm-hero-layer-shed-800.jpg 800w, assets/images/hero/farm-hero-layer-shed.jpg 1600w"
+           sizes="100vw" width="1600" height="1200" fetchpriority="high" decoding="async"
+           alt="Long rows of white hens and freshly laid eggs inside a Tressto Poultry Farm shed"
+           class="absolute inset-0 -z-20 h-full w-full object-cover object-[62%_center] lg:object-center" />
+      <div class="absolute inset-0 -z-10 bg-linear-to-t from-forest-950 via-forest-950/70 to-forest-950/40 lg:via-forest-950/25 lg:to-forest-950/20"></div>
+      <div class="absolute inset-0 -z-10 hidden bg-linear-to-r from-forest-950/90 via-forest-950/45 to-transparent lg:block"></div>
 
-      <div class="relative mx-auto grid min-h-[680px] max-w-7xl items-center gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[1.05fr_.95fr] lg:px-10 lg:py-24">
-        <div class="max-w-3xl text-white">
-          <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-amber-300/30 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-amber-200 backdrop-blur">
-            <span class="h-2 w-2 rounded-full bg-amber-400"></span>
-            Poultry Farm • Bhanang, Tala
-          </div>
+      <div class="mx-auto flex w-full max-w-7xl flex-1 flex-col justify-end px-4 pb-8 pt-28 sm:px-6 sm:pb-10 lg:justify-center lg:px-8 lg:pb-12 lg:pt-32">
+        <div class="max-w-3xl">
+          <p class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-forest-950/40 px-3.5 py-1.5 text-[0.6875rem] font-bold uppercase tracking-[0.18em] text-sun-200 backdrop-blur-sm sm:text-xs">
+            <span class="size-1.5 rounded-full bg-sun-400"></span>
+            Poultry farm · Bhanang, Tala · Raigad
+          </p>
 
-          <h1 class="max-w-3xl text-5xl font-black leading-[0.98] tracking-tight sm:text-6xl lg:text-7xl">
-            Fresh eggs.
-            <span class="text-amber-300">Straight from the farm.</span>
+          <h1 class="mt-5 font-display text-[2.6rem] font-semibold leading-[1.02] tracking-tight text-balance min-[400px]:text-5xl sm:text-6xl lg:text-7xl xl:text-[5.25rem]">
+            Fresh eggs, <span class="italic text-sun-300">straight from the farm.</span>
           </h1>
 
-          <p class="mt-7 max-w-2xl text-base leading-7 text-white/80 sm:text-lg">
+          <p class="mt-5 max-w-xl text-base leading-relaxed text-white/85 sm:mt-6 sm:text-lg">
             Tressto Poultry Farm supplies quality poultry products with a focus on hygiene,
-            healthy farming practices and consistent quality — available for both
-            <strong class="text-white">wholesale and retail</strong> orders.
+            healthy farming practices and consistent quality — for both
+            <strong class="font-bold text-white">wholesale</strong> and <strong class="font-bold text-white">retail</strong> customers.
           </p>
 
-          <div class="mt-9 flex flex-col gap-3 sm:flex-row">
-            <a href="https://wa.me/919869046103?text=Hello%20Tressto%20Poultry%20Farm%2C%20I%20want%20to%20enquire%20about%20eggs."
+          <div class="mt-7 flex flex-col gap-3 sm:mt-9 sm:flex-row">
+            <a href="https://wa.me/919869046103?text=Hello%20Tressto%20Poultry%20Farm%2C%20I%20would%20like%20to%20enquire%20about%20eggs."
                target="_blank" rel="noopener noreferrer"
-               class="inline-flex items-center justify-center gap-2 rounded-full bg-amber-400 px-7 py-4 font-extrabold text-[#173b2b] shadow-xl transition hover:-translate-y-0.5 hover:bg-amber-300">
+               class="group inline-flex items-center justify-center gap-2.5 rounded-full bg-sun-400 px-7 py-4 text-base font-extrabold text-forest-950 shadow-lg shadow-black/20 transition hover:-translate-y-0.5 hover:bg-sun-300">
+              <svg class="size-5" aria-hidden="true"><use href="#i-whatsapp"/></svg>
               Enquire on WhatsApp
-              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M5 12h13M13 6l6 6-6 6"/>
-              </svg>
-            </a>
-            <a href="#products"
-               class="inline-flex items-center justify-center rounded-full border border-white/25 bg-white/10 px-7 py-4 font-bold backdrop-blur transition hover:bg-white/15">
-              Explore Supply
-            </a>
-          </div>
-
-          <div class="mt-10 grid max-w-xl grid-cols-3 gap-3">
-            <div class="rounded-2xl border border-white/10 bg-white/10 p-4 backdrop-blur">
-              <div class="text-xl font-black text-amber-300">Wholesale</div>
-              <div class="mt-1 text-xs text-white/65">Bulk orders</div>
-            </div>
-            <div class="rounded-2xl border border-white/10 bg-white/10 p-4 backdrop-blur">
-              <div class="text-xl font-black text-amber-300">Retail</div>
-              <div class="mt-1 text-xs text-white/65">Everyday orders</div>
-            </div>
-            <div class="rounded-2xl border border-white/10 bg-white/10 p-4 backdrop-blur">
-              <div class="text-xl font-black text-amber-300">6 AM–8 PM</div>
-              <div class="mt-1 text-xs text-white/65">Open daily</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Egg visual -->
-        <div class="relative hidden lg:block">
-          <div class="absolute -inset-5 rounded-[2.5rem] bg-amber-300/10 blur-2xl"></div>
-          <div class="relative overflow-hidden rounded-[2rem] border border-white/15 bg-white/10 p-3 shadow-2xl backdrop-blur">
-            <img
-              src="assets/farm-01.jpg"
-              alt="Fresh eggs supplied by Tressto Poultry Farm"
-              class="h-[520px] w-full rounded-[1.5rem] object-cover"
-              width="720" height="1280" loading="eager"
-            />
-            <div class="absolute bottom-7 left-7 right-7 rounded-2xl border border-white/15 bg-[#173b2b]/90 p-5 text-white backdrop-blur">
-              <p class="text-xs font-bold uppercase tracking-[0.2em] text-amber-300">What we supply</p>
-              <p class="mt-1 text-lg font-extrabold">Eggs for wholesale & retail buyers</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="bg-stone-50 py-20 sm:py-24">
-      <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-        <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-          <div class="relative">
-            <div class="overflow-hidden rounded-[2rem] shadow-2xl">
-              <img
-                src="assets/farm-04.jpg"
-                alt="Tressto Poultry Farm poultry shed with chickens"
-                class="h-[480px] w-full object-cover"
-                width="720" height="1280" loading="lazy"
-              />
-            </div>
-            <div class="absolute -bottom-6 -right-3 rounded-2xl bg-amber-400 p-5 shadow-xl sm:right-5">
-              <div class="text-3xl font-black text-[#173b2b]">6 AM</div>
-              <div class="text-xs font-bold uppercase tracking-widest text-[#173b2b]/70">Opening time</div>
-            </div>
-          </div>
-
-          <div>
-            <p class="text-sm font-black uppercase tracking-[0.22em] text-emerald-700">About Tressto</p>
-            <h2 class="mt-3 text-4xl font-black tracking-tight text-[#173b2b] sm:text-5xl">
-              A dependable poultry supply for everyday needs.
-            </h2>
-            <p class="mt-6 text-base leading-8 text-stone-600">
-              Tressto Poultry Farm is a trusted poultry farm committed to providing quality
-              poultry products with a focus on hygiene, healthy farming practices, and
-              consistent quality.
-            </p>
-            <p class="mt-4 text-base leading-8 text-stone-600">
-              We serve customers with reliable poultry products and aim to build long-term
-              trust through quality and responsible farming.
-            </p>
-
-            <div class="mt-8 grid gap-4 sm:grid-cols-2">
-              <div class="rounded-2xl border border-stone-200 bg-white p-5 shadow-sm">
-                <div class="mb-3 grid h-11 w-11 place-items-center rounded-xl bg-emerald-50 text-emerald-700">
-                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M12 3 4 7v5c0 4.8 3.4 7.9 8 9 4.6-1.1 8-4.2 8-9V7l-8-4Z"/>
-                    <path d="m8.5 12 2.2 2.2 4.8-5"/>
-                  </svg>
-                </div>
-                <h3 class="font-extrabold">Hygiene focused</h3>
-                <p class="mt-1 text-sm leading-6 text-stone-500">A clean and responsible approach to poultry supply.</p>
-              </div>
-
-              <div class="rounded-2xl border border-stone-200 bg-white p-5 shadow-sm">
-                <div class="mb-3 grid h-11 w-11 place-items-center rounded-xl bg-amber-50 text-amber-700">
-                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M5 12h14M12 5v14"/>
-                    <circle cx="12" cy="12" r="9"/>
-                  </svg>
-                </div>
-                <h3 class="font-extrabold">Flexible quantities</h3>
-                <p class="mt-1 text-sm leading-6 text-stone-500">Talk to us for retail or bulk requirements.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Products / Supply -->
-    <section id="products" class="bg-white py-20 sm:py-24">
-      <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-        <div class="mx-auto max-w-2xl text-center">
-          <p class="text-sm font-black uppercase tracking-[0.22em] text-emerald-700">Our supply</p>
-          <h2 class="mt-3 text-4xl font-black tracking-tight text-[#173b2b] sm:text-5xl">Built for retail and bulk buyers.</h2>
-          <p class="mt-5 leading-7 text-stone-600">
-            Whether you need eggs for your home or a larger recurring requirement,
-            contact us with your quantity and we can discuss availability and pricing.
-          </p>
-        </div>
-
-        <div class="mt-12 grid gap-6 md:grid-cols-3">
-          <article class="group overflow-hidden rounded-[1.75rem] border border-stone-200 bg-stone-50 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
-            <div class="relative h-64 overflow-hidden">
-              <img
-                src="assets/farm-12.jpg"
-                alt="Egg trays at Tressto Poultry Farm"
-                class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                width="720" height="1280" loading="lazy"
-              />
-            </div>
-            <div class="p-7">
-              <p class="text-xs font-black uppercase tracking-widest text-amber-700">01</p>
-              <h3 class="mt-2 text-2xl font-black text-[#173b2b]">Fresh Eggs</h3>
-              <p class="mt-3 leading-7 text-stone-600">For households, shops and regular customers looking for poultry egg supply.</p>
-            </div>
-          </article>
-
-          <article class="group overflow-hidden rounded-[1.75rem] border border-stone-200 bg-stone-50 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
-            <div class="relative h-64 overflow-hidden">
-              <img
-                src="assets/farm-03.jpg"
-                alt="Tressto Poultry Farm commercial poultry shed"
-                class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                width="720" height="1280" loading="lazy"
-              />
-            </div>
-            <div class="p-7">
-              <p class="text-xs font-black uppercase tracking-widest text-amber-700">02</p>
-              <h3 class="mt-2 text-2xl font-black text-[#173b2b]">Wholesale Supply</h3>
-              <p class="mt-3 leading-7 text-stone-600">For shops, food businesses and buyers who need larger quantities.</p>
-            </div>
-          </article>
-
-          <article class="group overflow-hidden rounded-[1.75rem] border border-stone-200 bg-stone-50 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
-            <div class="relative h-64 overflow-hidden">
-              <img
-                src="assets/farm-10.jpg"
-                alt="Chickens inside Tressto Poultry Farm"
-                class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                width="720" height="1280" loading="lazy"
-              />
-            </div>
-            <div class="p-7">
-              <p class="text-xs font-black uppercase tracking-widest text-amber-700">03</p>
-              <h3 class="mt-2 text-2xl font-black text-[#173b2b]">Retail Orders</h3>
-              <p class="mt-3 leading-7 text-stone-600">Smaller orders are welcome. Contact us for current availability and pricing.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="bg-[#173b2b] py-16 text-white sm:py-20">
-      <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-        <div class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-[#23563e] to-[#102f23] px-7 py-12 shadow-2xl sm:px-12 lg:flex lg:items-center lg:justify-between lg:gap-12">
-          <div class="relative z-10 max-w-2xl">
-            <p class="text-sm font-black uppercase tracking-[0.2em] text-amber-300">Need a regular supply?</p>
-            <h2 class="mt-3 text-3xl font-black tracking-tight sm:text-4xl">Tell us what quantity you need.</h2>
-            <p class="mt-4 leading-7 text-white/70">
-              Wholesale or retail — send a quick WhatsApp message and ask about today's availability and pricing.
-            </p>
-          </div>
-          <div class="relative z-10 mt-8 flex shrink-0 flex-col gap-3 sm:flex-row lg:mt-0">
-            <a href="https://wa.me/919869046103?text=Hello%20Tressto%20Poultry%20Farm%2C%20I%20want%20to%20know%20today%27s%20egg%20availability%20and%20price."
-               target="_blank" rel="noopener noreferrer"
-               class="rounded-full bg-amber-400 px-7 py-4 text-center font-extrabold text-[#173b2b] transition hover:bg-amber-300">
-              Ask on WhatsApp
+              <svg class="size-4 transition group-hover:translate-x-0.5" aria-hidden="true"><use href="#i-arrow"/></svg>
             </a>
             <a href="tel:+919869046103"
-               class="rounded-full border border-white/20 px-7 py-4 text-center font-bold transition hover:bg-white/10">
-              +91 98690 46103
+               class="inline-flex items-center justify-center gap-2.5 rounded-full border border-white/30 bg-white/5 px-7 py-4 text-base font-bold backdrop-blur-sm transition hover:border-white/60 hover:bg-white/10">
+              <svg class="size-5" aria-hidden="true"><use href="#i-phone"/></svg>
+              Call 098690 46103
             </a>
           </div>
-          <div class="absolute -right-20 -top-24 h-64 w-64 rounded-full bg-amber-300/10 blur-3xl"></div>
+        </div>
+
+        <dl class="mt-10 grid grid-cols-3 divide-x divide-white/15 border-t border-white/15 pt-5 sm:mt-14 sm:pt-6 lg:max-w-3xl">
+          <div class="pr-3 sm:pr-6">
+            <dt class="text-[0.625rem] font-bold uppercase tracking-[0.18em] text-white/55 sm:text-xs">Wholesale</dt>
+            <dd class="mt-1 text-sm font-bold leading-snug sm:text-base">Bulk orders<span class="hidden sm:inline"> for shops &amp; businesses</span></dd>
+          </div>
+          <div class="px-3 sm:px-6">
+            <dt class="text-[0.625rem] font-bold uppercase tracking-[0.18em] text-white/55 sm:text-xs">Retail</dt>
+            <dd class="mt-1 text-sm font-bold leading-snug sm:text-base">Everyday orders<span class="hidden sm:inline"> welcome</span></dd>
+          </div>
+          <div class="pl-3 sm:pl-6">
+            <dt class="text-[0.625rem] font-bold uppercase tracking-[0.18em] text-white/55 sm:text-xs">Open daily</dt>
+            <dd class="mt-1 text-sm font-bold leading-snug sm:text-base">6 AM – 8 PM</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============================== ABOUT ============================== -->
+    <section id="about" class="bg-cream-50 py-20 sm:py-24 lg:py-32">
+      <div class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 px-4 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:px-8">
+
+        <div data-reveal class="relative lg:col-span-6">
+          <figure class="relative overflow-hidden rounded-[1.75rem] shadow-2xl shadow-forest-950/15">
+            <img src="assets/images/farm/layer-shed-aisle.jpg"
+                 srcset="assets/images/farm/layer-shed-aisle-800.jpg 800w, assets/images/farm/layer-shed-aisle.jpg 1200w"
+                 sizes="(min-width: 1024px) 45vw, 100vw" width="1200" height="1600" loading="lazy" decoding="async"
+                 alt="A long aisle between cage rows inside a Tressto Poultry Farm shed, with hens and eggs along the feeders"
+                 class="aspect-[4/3] w-full object-cover object-[center_60%] sm:aspect-[16/11] lg:aspect-[4/5]" />
+            <figcaption class="absolute left-4 top-4 rounded-full bg-forest-950/70 px-3.5 py-1.5 text-xs font-semibold text-white backdrop-blur-sm">
+              Inside our poultry shed
+            </figcaption>
+          </figure>
+          <figure class="absolute -bottom-10 right-3 hidden w-[46%] overflow-hidden rounded-2xl border-[6px] border-cream-50 shadow-xl sm:block lg:-right-8">
+            <img src="assets/images/farm/farm-exterior-signboard-800.jpg" width="800" height="600" loading="lazy" decoding="async"
+                 alt="Tressto Poultry Farm signboard beside the blue poultry shed at Bhanang"
+                 class="aspect-[4/3] w-full object-cover" />
+          </figure>
+        </div>
+
+        <div class="lg:col-span-6 lg:pl-4">
+          <p class="text-xs font-extrabold uppercase tracking-[0.24em] text-leaf-600">About Tressto</p>
+          <h2 class="mt-4 font-display text-4xl font-semibold leading-[1.08] tracking-tight text-forest-900 text-balance sm:text-5xl">
+            A dependable poultry supply for everyday needs.
+          </h2>
+          <div class="mt-6 space-y-4 text-base leading-8 text-forest-950/70 sm:text-[1.0625rem]">
+            <p>
+              Tressto Poultry Farm is a trusted poultry farm in Bhanang, Tala, committed to providing
+              quality poultry products with a focus on hygiene, healthy farming practices and consistent quality.
+            </p>
+            <p>
+              We serve customers with reliable poultry products and aim to build long-term trust through
+              quality and responsible farming.
+            </p>
+          </div>
+
+          <p class="mt-8 flex flex-wrap items-center gap-x-3 gap-y-1 font-display text-lg italic text-forest-700">
+            Fresh <span class="size-1.5 rounded-full bg-sun-400"></span>
+            Reliable <span class="size-1.5 rounded-full bg-sun-400"></span>
+            Local
+          </p>
+
+          <ul class="mt-8 grid gap-x-8 gap-y-6 border-t border-cream-300 pt-8 sm:grid-cols-2">
+            <li class="flex gap-4">
+              <span class="grid size-11 shrink-0 place-items-center rounded-xl bg-forest-800 text-sun-300"><svg class="size-5" aria-hidden="true"><use href="#i-shield"/></svg></span>
+              <div>
+                <h3 class="font-bold text-forest-900">Hygiene focused</h3>
+                <p class="mt-1 text-sm leading-6 text-forest-950/60">A clean and responsible approach to poultry supply.</p>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <span class="grid size-11 shrink-0 place-items-center rounded-xl bg-forest-800 text-sun-300"><svg class="size-5" aria-hidden="true"><use href="#i-leaf"/></svg></span>
+              <div>
+                <h3 class="font-bold text-forest-900">Healthy farming practices</h3>
+                <p class="mt-1 text-sm leading-6 text-forest-950/60">Responsible farming at the heart of how we work.</p>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <span class="grid size-11 shrink-0 place-items-center rounded-xl bg-forest-800 text-sun-300"><svg class="size-5" aria-hidden="true"><use href="#i-star"/></svg></span>
+              <div>
+                <h3 class="font-bold text-forest-900">Consistent quality</h3>
+                <p class="mt-1 text-sm leading-6 text-forest-950/60">Reliable poultry products our customers can count on.</p>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <span class="grid size-11 shrink-0 place-items-center rounded-xl bg-forest-800 text-sun-300"><svg class="size-5" aria-hidden="true"><use href="#i-boxes"/></svg></span>
+              <div>
+                <h3 class="font-bold text-forest-900">Flexible quantities</h3>
+                <p class="mt-1 text-sm leading-6 text-forest-950/60">Talk to us for retail or bulk requirements.</p>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- Gallery -->
-    <section id="gallery" class="bg-stone-50 py-20 sm:py-24">
-      <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-        <div class="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
-          <div>
-            <p class="text-sm font-black uppercase tracking-[0.22em] text-emerald-700">Gallery</p>
-            <h2 class="mt-3 text-4xl font-black tracking-tight text-[#173b2b] sm:text-5xl">A glimpse of poultry farming.</h2>
+    <!-- ============================== SUPPLY ============================== -->
+    <section id="supply" class="bg-white py-20 sm:py-24 lg:py-32">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div class="max-w-2xl">
+            <p class="text-xs font-extrabold uppercase tracking-[0.24em] text-leaf-600">What we supply</p>
+            <h2 class="mt-4 font-display text-4xl font-semibold leading-[1.08] tracking-tight text-forest-900 text-balance sm:text-5xl">
+              Fresh eggs for retail and bulk buyers.
+            </h2>
           </div>
-          <p class="max-w-md text-sm leading-6 text-stone-500">
-            Real photographs from Tressto Poultry Farm, showing the poultry sheds, chickens and daily egg collection.
+          <p class="max-w-md text-base leading-7 text-forest-950/65">
+            Whether you need eggs for your home or a larger recurring requirement, contact us with your
+            quantity and we can discuss availability and pricing.
           </p>
         </div>
 
-        <div class="mt-10 grid auto-rows-[220px] gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          <div class="group relative overflow-hidden rounded-3xl sm:col-span-2 sm:row-span-2">
-            <img src="assets/farm-08.jpg"
-                 alt="Tressto Poultry Farm poultry shed" class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                 width="720" height="1280" loading="lazy" />
-            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-6 pt-20">
-              <span class="text-sm font-bold text-white">Poultry farm</span>
+        <div class="mt-12 grid grid-cols-1 gap-5 lg:mt-16 lg:grid-cols-12 lg:gap-6">
+          <!-- Fresh eggs feature -->
+          <article data-reveal class="group relative isolate flex flex-col justify-end min-h-[26rem] overflow-hidden rounded-[1.75rem] bg-forest-900 text-white sm:min-h-[30rem] lg:col-span-5 lg:min-h-0">
+            <img src="assets/images/eggs/egg-trays-stock-01.jpg" width="720" height="1280" loading="lazy" decoding="async"
+                 alt="Tall stacks of colourful trays filled with fresh white eggs at Tressto Poultry Farm"
+                 class="absolute inset-0 -z-10 h-full w-full object-cover object-[center_40%] transition duration-700 ease-out group-hover:scale-[1.04]" />
+            <div class="absolute inset-0 -z-10 bg-linear-to-t from-forest-950 via-forest-950/45 to-transparent"></div>
+            <div class="p-6 sm:p-8">
+              <p class="inline-flex rounded-full bg-sun-400 px-3 py-1 text-[0.6875rem] font-extrabold uppercase tracking-[0.16em] text-forest-950">Our product</p>
+              <h3 class="mt-4 font-display text-3xl font-semibold sm:text-4xl">Fresh eggs</h3>
+              <p class="mt-3 max-w-sm leading-7 text-white/80">
+                Fresh eggs from our own poultry sheds at Bhanang, Tala — supplied to wholesale and retail customers.
+              </p>
             </div>
-          </div>
+          </article>
 
-          <div class="group relative overflow-hidden rounded-3xl">
-            <img src="assets/farm-12.jpg"
-                 alt="Fresh eggs supplied by Tressto Poultry Farm" class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                 width="720" height="1280" loading="lazy" />
-          </div>
+          <div class="grid gap-5 lg:col-span-7 lg:gap-6">
+            <!-- Wholesale -->
+            <article data-reveal class="group grid overflow-hidden rounded-[1.75rem] border border-cream-200 bg-cream-50 sm:grid-cols-5">
+              <div class="relative overflow-hidden sm:col-span-2 sm:min-h-56">
+                <img src="assets/images/eggs/egg-trays-stock-02-800.jpg" srcset="assets/images/eggs/egg-trays-stock-02-800.jpg 800w, assets/images/eggs/egg-trays-stock-02.jpg 1280w" sizes="(min-width: 640px) 30vw, 100vw" width="800" height="450" loading="lazy" decoding="async"
+                     alt="Rows of stacked egg trays ready in the farm's storage area"
+                     class="aspect-[16/9] w-full object-cover sm:absolute sm:inset-0 sm:h-full transition duration-700 ease-out group-hover:scale-[1.04] sm:aspect-auto" />
+              </div>
+              <div class="flex flex-col p-6 sm:col-span-3 sm:p-8">
+                <p class="text-xs font-extrabold uppercase tracking-[0.2em] text-sun-500">Wholesale supply</p>
+                <h3 class="mt-2 font-display text-2xl font-semibold text-forest-900 sm:text-3xl">For shops &amp; businesses</h3>
+                <p class="mt-3 leading-7 text-forest-950/65">For shops, food businesses and buyers who need larger quantities.</p>
+                <ul class="mt-4 space-y-2 text-sm font-semibold text-forest-900">
+                  <li class="flex items-center gap-2.5"><svg class="size-4 shrink-0 text-leaf-500" aria-hidden="true"><use href="#i-check"/></svg>Bulk and recurring requirements</li>
+                  <li class="flex items-center gap-2.5"><svg class="size-4 shrink-0 text-leaf-500" aria-hidden="true"><use href="#i-check"/></svg>Availability &amp; pricing on enquiry</li>
+                </ul>
+                <a href="https://wa.me/919869046103?text=Hello%20Tressto%20Poultry%20Farm%2C%20I%20would%20like%20to%20enquire%20about%20wholesale%20egg%20supply.%20Quantity%20required%3A%20"
+                   target="_blank" rel="noopener noreferrer"
+                   class="mt-6 inline-flex w-full items-center justify-center gap-2 self-start rounded-full bg-forest-800 px-6 py-3.5 text-sm font-bold text-white transition hover:bg-forest-700 sm:w-auto">
+                  <svg class="size-4" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+                  Wholesale enquiry
+                </a>
+              </div>
+            </article>
 
-          <div class="group relative overflow-hidden rounded-3xl">
-            <img src="assets/farm-10.jpg"
-                 alt="Chickens at Tressto Poultry Farm" class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                 width="720" height="1280" loading="lazy" />
-          </div>
-
-          <div class="group relative overflow-hidden rounded-3xl">
-            <img src="assets/farm-03.jpg"
-                 alt="Poultry production at Tressto Poultry Farm" class="h-full w-full object-cover object-center transition duration-700 group-hover:scale-105"
-                 width="720" height="1280" loading="lazy" />
-          </div>
-
-          <div class="group relative overflow-hidden rounded-3xl">
-            <img src="assets/farm-12.jpg"
-                 alt="Egg supply at Tressto Poultry Farm" class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                 width="720" height="1280" loading="lazy" />
+            <!-- Retail -->
+            <article data-reveal class="group grid overflow-hidden rounded-[1.75rem] border border-cream-200 bg-cream-50 sm:grid-cols-5">
+              <div class="relative overflow-hidden sm:col-span-2 sm:min-h-56">
+                <img src="assets/images/eggs/egg-trays-stock-03.jpg" width="720" height="1280" loading="lazy" decoding="async"
+                     alt="Close view of egg trays stacked in pink, green, blue and yellow"
+                     class="aspect-[16/9] w-full object-cover sm:absolute sm:inset-0 sm:h-full object-[center_35%] transition duration-700 ease-out group-hover:scale-[1.04] sm:aspect-auto" />
+              </div>
+              <div class="flex flex-col p-6 sm:col-span-3 sm:p-8">
+                <p class="text-xs font-extrabold uppercase tracking-[0.2em] text-sun-500">Retail orders</p>
+                <h3 class="mt-2 font-display text-2xl font-semibold text-forest-900 sm:text-3xl">For homes &amp; everyday needs</h3>
+                <p class="mt-3 leading-7 text-forest-950/65">For households and regular customers. Smaller orders are welcome.</p>
+                <ul class="mt-4 space-y-2 text-sm font-semibold text-forest-900">
+                  <li class="flex items-center gap-2.5"><svg class="size-4 shrink-0 text-leaf-500" aria-hidden="true"><use href="#i-check"/></svg>Households &amp; regular customers</li>
+                  <li class="flex items-center gap-2.5"><svg class="size-4 shrink-0 text-leaf-500" aria-hidden="true"><use href="#i-check"/></svg>Ask for today's availability</li>
+                </ul>
+                <a href="https://wa.me/919869046103?text=Hello%20Tressto%20Poultry%20Farm%2C%20I%20would%20like%20to%20order%20eggs%20for%20home%20%28retail%29.%20Please%20share%20today%27s%20availability%20and%20price."
+                   target="_blank" rel="noopener noreferrer"
+                   class="mt-6 inline-flex w-full items-center justify-center gap-2 self-start rounded-full border border-forest-800 px-6 py-3.5 text-sm font-bold text-forest-900 transition hover:bg-forest-800 hover:text-white sm:w-auto">
+                  <svg class="size-4" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+                  Retail enquiry
+                </a>
+              </div>
+            </article>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact / Location -->
-    <section id="contact" class="bg-white py-20 sm:py-24">
-      <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-        <div class="grid gap-8 lg:grid-cols-[.85fr_1.15fr]">
-          <div class="rounded-[2rem] bg-[#173b2b] p-7 text-white shadow-xl sm:p-10">
-            <p class="text-sm font-black uppercase tracking-[0.22em] text-amber-300">Visit / Contact</p>
-            <h2 class="mt-3 text-4xl font-black tracking-tight">Let's talk poultry supply.</h2>
+    <!-- ============================== OUR FARM ============================== -->
+    <section id="farm" class="relative overflow-hidden bg-forest-950 py-20 text-white sm:py-24 lg:py-32">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:items-end">
+          <div class="lg:col-span-7">
+            <p class="text-xs font-extrabold uppercase tracking-[0.24em] text-sun-300">Our farm</p>
+            <h2 class="mt-4 font-display text-4xl font-semibold leading-[1.08] tracking-tight text-balance sm:text-5xl">
+              A real, working poultry farm in Bhanang, Tala.
+            </h2>
+          </div>
+          <p class="max-w-md text-base leading-7 text-white/65 lg:col-span-5 lg:justify-self-end">
+            These are real photographs from Tressto Poultry Farm, showing the poultry sheds,
+            the chickens and daily egg collection.
+          </p>
+        </div>
 
-            <div class="mt-10 space-y-6">
-              <div class="flex gap-4">
-                <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-white/10 text-amber-300">
-                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/>
-                    <circle cx="12" cy="10" r="2.5"/>
-                  </svg>
-                </span>
-                <div>
-                  <p class="text-xs font-bold uppercase tracking-widest text-white/50">Location</p>
-                  <p class="mt-1 font-bold">Bhanang, Tala, Maharashtra 402111</p>
-                </div>
-              </div>
-
-              <div class="flex gap-4">
-                <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-white/10 text-amber-300">
-                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.7 19.7 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.7 19.7 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.2-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.8 2.1Z"/>
-                  </svg>
-                </span>
-                <div>
-                  <p class="text-xs font-bold uppercase tracking-widest text-white/50">Phone</p>
-                  <a href="tel:+919869046103" class="mt-1 block font-bold hover:text-amber-300">098690 46103</a>
-                </div>
-              </div>
-
-              <div class="flex gap-4">
-                <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-white/10 text-amber-300">
-                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 8.7 8.7 0 0 1-4-.9L3 20l.9-4.8A8.3 8.3 0 0 1 3 11.5 8.5 8.5 0 1 1 21 11.5Z"/>
-                    <path d="M8 9.5c.3 2 2.5 4.2 4.5 4.5l1.1-1.1c.2-.2.5-.3.8-.1l1.5.7"/>
-                  </svg>
-                </span>
-                <div>
-                  <p class="text-xs font-bold uppercase tracking-widest text-white/50">WhatsApp</p>
-                  <a href="https://wa.me/919869046103" target="_blank" rel="noopener noreferrer" class="mt-1 block font-bold hover:text-amber-300">+91 98690 46103</a>
-                </div>
-              </div>
-
-              <div class="flex gap-4">
-                <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-white/10 text-amber-300">
-                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="9"/>
-                    <path d="M3 12h18M12 3c2.2 2.5 3.3 5.5 3.3 9s-1.1 6.5-3.3 9c-2.2-2.5-3.3-5.5-3.3-9S9.8 5.5 12 3Z"/>
-                  </svg>
-                </span>
-                <div>
-                  <p class="text-xs font-bold uppercase tracking-widest text-white/50">Website</p>
-                  <a href="https://toresstopoultryfarm.vercel.app/" target="_blank" rel="noopener noreferrer" class="mt-1 block break-all font-bold hover:text-amber-300">toresstopoultryfarm.vercel.app</a>
-                </div>
-              </div>
+        <ol class="mt-12 grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4">
+          <li data-reveal class="group">
+            <div class="overflow-hidden rounded-2xl">
+              <img src="assets/images/farm/poultry-shed-exterior-800.jpg" srcset="assets/images/farm/poultry-shed-exterior-800.jpg 800w, assets/images/farm/poultry-shed-exterior.jpg 1280w" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" width="800" height="600" loading="lazy" decoding="async"
+                   alt="Blue poultry shed at Tressto Poultry Farm above the laterite boundary wall"
+                   class="aspect-[4/3] w-full object-cover transition duration-700 ease-out group-hover:scale-105 lg:aspect-[4/5]" />
             </div>
+            <p class="mt-5 font-display text-sm italic text-sun-300">01</p>
+            <h3 class="mt-1 text-xl font-bold">The poultry sheds</h3>
+            <p class="mt-2 text-sm leading-6 text-white/60">Our sheds stand on the farm site at Bhanang, on the Indapur – Tala road.</p>
+          </li>
+          <li data-reveal class="group">
+            <div class="overflow-hidden rounded-2xl">
+              <img src="assets/images/farm/layer-shed-overhead-800.jpg" srcset="assets/images/farm/layer-shed-overhead-800.jpg 800w, assets/images/farm/layer-shed-overhead.jpg 1600w" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" width="800" height="600" loading="lazy" decoding="async"
+                   alt="High view down the length of a shed showing several cage rows under the roof"
+                   class="aspect-[4/3] w-full object-cover transition duration-700 ease-out group-hover:scale-105 lg:aspect-[4/5]" />
+            </div>
+            <p class="mt-5 font-display text-sm italic text-sun-300">02</p>
+            <h3 class="mt-1 text-xl font-bold">Inside the sheds</h3>
+            <p class="mt-2 text-sm leading-6 text-white/60">Long, orderly cage rows under an open, mesh-sided roof.</p>
+          </li>
+          <li data-reveal class="group">
+            <div class="overflow-hidden rounded-2xl">
+              <img src="assets/images/farm/feed-water-lines-800.jpg" srcset="assets/images/farm/feed-water-lines-800.jpg 800w, assets/images/farm/feed-water-lines.jpg 1280w" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" width="800" height="600" loading="lazy" decoding="async"
+                   alt="Water tanks and pipe lines feeding the cage rows, with hens at the feed troughs"
+                   class="aspect-[4/3] w-full object-cover transition duration-700 ease-out group-hover:scale-105 lg:aspect-[4/5]" />
+            </div>
+            <p class="mt-5 font-display text-sm italic text-sun-300">03</p>
+            <h3 class="mt-1 text-xl font-bold">Feed &amp; water lines</h3>
+            <p class="mt-2 text-sm leading-6 text-white/60">Feed troughs and water lines run along every row of cages.</p>
+          </li>
+          <li data-reveal class="group">
+            <div class="overflow-hidden rounded-2xl">
+              <img src="assets/images/farm/egg-collection-cages-800.jpg" srcset="assets/images/farm/egg-collection-cages-800.jpg 800w, assets/images/farm/egg-collection-cages.jpg 1280w" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" width="800" height="600" loading="lazy" decoding="async"
+                   alt="Fresh white eggs rolled forward to the collection trays at the front of the cages"
+                   class="aspect-[4/3] w-full object-cover transition duration-700 ease-out group-hover:scale-105 lg:aspect-[4/5]" />
+            </div>
+            <p class="mt-5 font-display text-sm italic text-sun-300">04</p>
+            <h3 class="mt-1 text-xl font-bold">Daily egg collection</h3>
+            <p class="mt-2 text-sm leading-6 text-white/60">Eggs are collected from the cage rows every day, ready for supply.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
 
-            <a href="https://www.google.com/maps?q=18.267772,73.1708836&z=17&hl=en"
+    <!-- ============================== VIDEOS ============================== -->
+    <section id="videos" class="bg-cream-100 py-20 sm:py-24 lg:py-32">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12">
+          <div class="lg:col-span-4 lg:pt-4">
+            <p class="text-xs font-extrabold uppercase tracking-[0.24em] text-leaf-600">Farm videos</p>
+            <h2 class="mt-4 font-display text-4xl font-semibold leading-[1.08] tracking-tight text-forest-900 text-balance sm:text-5xl">
+              See the farm for yourself.
+            </h2>
+            <p class="mt-5 max-w-md text-base leading-7 text-forest-950/65">
+              Filmed on site at Tressto Poultry Farm — take a walk around the premises, inside the sheds
+              and through the egg stock.
+            </p>
+            <a href="https://wa.me/919869046103?text=Hello%20Tressto%20Poultry%20Farm%2C%20I%20would%20like%20to%20enquire%20about%20eggs."
                target="_blank" rel="noopener noreferrer"
-               class="mt-10 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-amber-400 px-5 py-4 font-extrabold text-[#173b2b] transition hover:bg-amber-300">
-              Open Location in Google Maps
-              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M5 12h13M13 6l6 6-6 6"/>
-              </svg>
+               class="mt-8 hidden items-center gap-2 font-bold text-forest-800 underline decoration-sun-400 decoration-2 underline-offset-8 transition hover:text-forest-600 lg:inline-flex">
+              Ask us about supply
+              <svg class="size-4" aria-hidden="true"><use href="#i-arrow"/></svg>
             </a>
           </div>
 
-          <div class="overflow-hidden rounded-[2rem] border border-stone-200 bg-stone-100 shadow-xl">
-            <div class="flex items-center justify-between gap-4 border-b border-stone-200 bg-white px-6 py-5">
-              <div>
-                <p class="text-xs font-black uppercase tracking-widest text-emerald-700">Find us</p>
-                <h3 class="mt-1 text-xl font-black text-[#173b2b]">Bhanang, Tala</h3>
-              </div>
-              <a href="https://www.google.com/maps?q=18.267772,73.1708836&z=17&hl=en"
-                 target="_blank" rel="noopener noreferrer"
-                 class="rounded-full border border-stone-200 px-4 py-2 text-xs font-bold text-stone-700 transition hover:border-emerald-700 hover:text-emerald-700">
-                Directions
-              </a>
-            </div>
+          <div class="lg:col-span-8">
+            <div class="-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 [scrollbar-width:none] sm:-mx-6 sm:px-6 md:mx-0 md:grid md:grid-cols-3 md:gap-5 md:overflow-visible md:px-0 md:pb-0">
 
-            <iframe
-              title="Tressto Poultry Farm location"
-              src="https://www.google.com/maps?q=18.267772,73.1708836&z=17&hl=en&output=embed"
-              class="h-[520px] w-full border-0 sm:h-[600px]"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-
-            <div class="border-t border-stone-200 bg-white p-6">
-              <div class="flex items-center gap-3">
-                <span class="grid h-10 w-10 place-items-center rounded-full bg-emerald-50 text-emerald-700">
-                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="9"/>
-                    <path d="M12 7v5l3 2"/>
-                  </svg>
-                </span>
-                <div>
-                  <p class="text-xs font-bold uppercase tracking-widest text-stone-400">Opening hours</p>
-                  <p class="mt-1 font-extrabold text-[#173b2b]">Monday – Sunday · 06:00 – 20:00</p>
+              <figure class="w-[72%] shrink-0 snap-center min-[480px]:w-[55%] md:w-auto">
+                <div class="relative aspect-[9/16] overflow-hidden rounded-3xl bg-forest-900 shadow-xl shadow-forest-950/15" data-video>
+                  <video class="absolute inset-0 h-full w-full object-cover" preload="none" playsinline
+                         poster="assets/images/video-posters/farm-tour-poster.jpg" width="478" height="850"
+                         aria-label="Farm tour video of Tressto Poultry Farm">
+                    <source src="assets/videos/farm-tour.mp4" type="video/mp4" />
+                  </video>
+                  <button type="button" data-video-play
+                          class="group absolute inset-0 flex flex-col justify-between bg-linear-to-t from-forest-950/85 via-transparent to-forest-950/20 p-4 text-left text-white">
+                    <span class="self-start rounded-full bg-sun-400 px-2.5 py-1 text-[0.6875rem] font-extrabold uppercase tracking-wider text-forest-950">Full tour</span>
+                    <span class="flex items-center gap-3">
+                      <span class="grid size-12 shrink-0 place-items-center rounded-full bg-white text-forest-900 shadow-lg transition group-hover:scale-110"><svg class="ml-0.5 size-5" aria-hidden="true"><use href="#i-play"/></svg></span>
+                      <span class="text-sm font-semibold">Play video · 2:50</span>
+                    </span>
+                  </button>
                 </div>
-              </div>
+                <figcaption class="mt-4 px-1">
+                  <span class="block font-bold text-forest-900">Farm tour</span>
+                  <span class="mt-1 block text-sm leading-6 text-forest-950/60">The sheds, the entrance, the egg store and inside the poultry sheds.</span>
+                </figcaption>
+              </figure>
+
+              <figure class="w-[72%] shrink-0 snap-center min-[480px]:w-[55%] md:w-auto">
+                <div class="relative aspect-[9/16] overflow-hidden rounded-3xl bg-forest-900 shadow-xl shadow-forest-950/15" data-video>
+                  <video class="absolute inset-0 h-full w-full object-cover" preload="none" playsinline
+                         poster="assets/images/video-posters/poultry-shed-walkthrough-poster.jpg" width="478" height="850"
+                         aria-label="Walkthrough video inside a Tressto Poultry Farm shed">
+                    <source src="assets/videos/poultry-shed-walkthrough.mp4" type="video/mp4" />
+                  </video>
+                  <button type="button" data-video-play
+                          class="group absolute inset-0 flex flex-col justify-end bg-linear-to-t from-forest-950/85 via-transparent to-transparent p-4 text-left text-white">
+                    <span class="flex items-center gap-3">
+                      <span class="grid size-12 shrink-0 place-items-center rounded-full bg-white text-forest-900 shadow-lg transition group-hover:scale-110"><svg class="ml-0.5 size-5" aria-hidden="true"><use href="#i-play"/></svg></span>
+                      <span class="text-sm font-semibold">Play video · 0:38</span>
+                    </span>
+                  </button>
+                </div>
+                <figcaption class="mt-4 px-1">
+                  <span class="block font-bold text-forest-900">Inside the poultry shed</span>
+                  <span class="mt-1 block text-sm leading-6 text-forest-950/60">Hens and fresh eggs along the cage rows.</span>
+                </figcaption>
+              </figure>
+
+              <figure class="w-[72%] shrink-0 snap-center min-[480px]:w-[55%] md:w-auto">
+                <div class="relative aspect-[9/16] overflow-hidden rounded-3xl bg-forest-900 shadow-xl shadow-forest-950/15" data-video>
+                  <video class="absolute inset-0 h-full w-full object-cover" preload="none" playsinline
+                         poster="assets/images/video-posters/egg-tray-stock-poster.jpg" width="474" height="850"
+                         aria-label="Video of egg tray stock at Tressto Poultry Farm">
+                    <source src="assets/videos/egg-tray-stock.mp4" type="video/mp4" />
+                  </video>
+                  <button type="button" data-video-play
+                          class="group absolute inset-0 flex flex-col justify-end bg-linear-to-t from-forest-950/85 via-transparent to-transparent p-4 text-left text-white">
+                    <span class="flex items-center gap-3">
+                      <span class="grid size-12 shrink-0 place-items-center rounded-full bg-white text-forest-900 shadow-lg transition group-hover:scale-110"><svg class="ml-0.5 size-5" aria-hidden="true"><use href="#i-play"/></svg></span>
+                      <span class="text-sm font-semibold">Play video · 0:53</span>
+                    </span>
+                  </button>
+                </div>
+                <figcaption class="mt-4 px-1">
+                  <span class="block font-bold text-forest-900">Egg tray stock</span>
+                  <span class="mt-1 block text-sm leading-6 text-forest-950/60">Trays of fresh eggs stacked at the farm.</span>
+                </figcaption>
+              </figure>
             </div>
+            <p class="mt-4 text-center text-xs font-semibold text-forest-950/45 md:hidden">Swipe to see more videos →</p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ============================== GALLERY ============================== -->
+    <section id="gallery" class="bg-cream-50 py-20 sm:py-24 lg:py-32">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+          <div class="max-w-2xl">
+            <p class="text-xs font-extrabold uppercase tracking-[0.24em] text-leaf-600">Gallery</p>
+            <h2 class="mt-4 font-display text-4xl font-semibold leading-[1.08] tracking-tight text-forest-900 text-balance sm:text-5xl">
+              A glimpse of life on the farm.
+            </h2>
+          </div>
+          <p class="max-w-sm text-sm leading-6 text-forest-950/60">Tap any photo to view it larger. All photographs taken at Tressto Poultry Farm.</p>
+        </div>
+
+        <div id="galleryGrid" class="mt-12 grid grid-flow-dense auto-rows-[9.5rem] grid-cols-2 gap-3 min-[480px]:auto-rows-[12rem] sm:gap-4 md:auto-rows-[12.5rem] md:grid-cols-4 lg:mt-14 lg:auto-rows-[14rem]">
+          <button type="button" data-lightbox="assets/images/gallery/farm-sheds-hillside.jpg" data-caption="Poultry sheds on the hillside at Bhanang"
+                  class="group relative col-span-2 row-span-2 overflow-hidden rounded-2xl bg-cream-200">
+            <img src="assets/images/gallery/farm-sheds-hillside-800.jpg" srcset="assets/images/gallery/farm-sheds-hillside-800.jpg 800w, assets/images/gallery/farm-sheds-hillside.jpg 1280w"
+                 sizes="(min-width: 768px) 50vw, 100vw" width="1280" height="960" loading="lazy" decoding="async"
+                 alt="Blue poultry sheds on the hillside at Tressto Poultry Farm, Bhanang"
+                 class="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-105" />
+            <span class="pointer-events-none absolute inset-x-0 bottom-0 bg-linear-to-t from-forest-950/80 to-transparent p-4 pt-14 text-left text-sm font-semibold text-white sm:p-5 sm:pt-16">Poultry sheds on the hillside at Bhanang</span>
+          </button>
+          <button type="button" data-lightbox="assets/images/gallery/layer-hens-closeup-01.jpg" data-caption="Hens and fresh eggs along the cage rows"
+                  class="group relative row-span-2 overflow-hidden rounded-2xl bg-cream-200">
+            <img src="assets/images/gallery/layer-hens-closeup-01-800.jpg" width="800" height="1067" loading="lazy" decoding="async"
+                 alt="Close view of white hens in cage rows with fresh eggs in the collection trays"
+                 class="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-105" />
+          </button>
+          <button type="button" data-lightbox="assets/images/gallery/layer-shed-aisle-02.jpg" data-caption="Looking down the aisle between cage rows"
+                  class="group relative row-span-2 overflow-hidden rounded-2xl bg-cream-200">
+            <img src="assets/images/gallery/layer-shed-aisle-02.jpg" width="720" height="1280" loading="lazy" decoding="async"
+                 alt="Narrow aisle between two long cage rows with hens and eggs on either side"
+                 class="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-105" />
+          </button>
+          <button type="button" data-lightbox="assets/images/gallery/cage-rows-panorama.jpg" data-caption="Cage rows stretching the length of the shed"
+                  class="group relative col-span-2 overflow-hidden rounded-2xl bg-cream-200">
+            <img src="assets/images/gallery/cage-rows-panorama-800.jpg" srcset="assets/images/gallery/cage-rows-panorama-800.jpg 800w, assets/images/gallery/cage-rows-panorama.jpg 1280w"
+                 sizes="(min-width: 768px) 50vw, 100vw" width="1280" height="720" loading="lazy" decoding="async"
+                 alt="Wide-angle view of cage rows stretching the length of the poultry shed"
+                 class="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-105" />
+          </button>
+          <button type="button" data-lightbox="assets/images/gallery/drinker-lines.jpg" data-caption="Water lines running along the cages"
+                  class="group relative overflow-hidden rounded-2xl bg-cream-200">
+            <img src="assets/images/gallery/drinker-lines-800.jpg" width="800" height="600" loading="lazy" decoding="async"
+                 alt="Water pipes running along multi-tier cage rows inside the shed"
+                 class="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-105" />
+          </button>
+          <button type="button" data-lightbox="assets/images/gallery/layer-hens-eggs.jpg" data-caption="Fresh eggs at the front of the cages"
+                  class="group relative overflow-hidden rounded-2xl bg-cream-200">
+            <img src="assets/images/gallery/layer-hens-eggs-800.jpg" width="800" height="600" loading="lazy" decoding="async"
+                 alt="Hens feeding at the trough with fresh eggs resting in front of the cages"
+                 class="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-105" />
+          </button>
+          <button type="button" data-lightbox="assets/images/gallery/layer-hens-closeup-02.jpg" data-caption="White hens at feeding time"
+                  class="group relative row-span-2 overflow-hidden rounded-2xl bg-cream-200">
+            <img src="assets/images/gallery/layer-hens-closeup-02-800.jpg" width="800" height="1067" loading="lazy" decoding="async"
+                 alt="White hens with red combs feeding at the trough inside the shed"
+                 class="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-105" />
+          </button>
+          <button type="button" data-lightbox="assets/images/gallery/layer-shed-wide.jpg" data-caption="Inside one of the poultry sheds"
+                  class="group relative col-span-2 row-span-2 overflow-hidden rounded-2xl bg-cream-200 md:col-span-2">
+            <img src="assets/images/gallery/layer-shed-wide-800.jpg" srcset="assets/images/gallery/layer-shed-wide-800.jpg 800w, assets/images/gallery/layer-shed-wide.jpg 1600w"
+                 sizes="(min-width: 768px) 50vw, 100vw" width="1600" height="1200" loading="lazy" decoding="async"
+                 alt="Wide view inside a poultry shed with rows of cages under a steel roof"
+                 class="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-105" />
+            <span class="pointer-events-none absolute inset-x-0 bottom-0 bg-linear-to-t from-forest-950/80 to-transparent p-4 pt-14 text-left text-sm font-semibold text-white sm:p-5 sm:pt-16">Inside one of the poultry sheds</span>
+          </button>
+          <button type="button" data-lightbox="assets/images/gallery/layer-cage-front.jpg" data-caption="Three-tier cage rows from the front"
+                  class="group relative row-span-2 overflow-hidden rounded-2xl bg-cream-200">
+            <img src="assets/images/gallery/layer-cage-front-800.jpg" width="800" height="1067" loading="lazy" decoding="async"
+                 alt="Front view of three-tier cage rows with hens and eggs"
+                 class="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-105" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== ENQUIRY CTA ============================== -->
+    <section class="relative isolate overflow-hidden bg-forest-900 py-20 text-white sm:py-28">
+      <img src="assets/images/cta/layer-shed-rows-800.jpg"
+           srcset="assets/images/cta/layer-shed-rows-800.jpg 800w, assets/images/cta/layer-shed-rows.jpg 1600w"
+           sizes="100vw" width="1600" height="1200" loading="lazy" decoding="async" alt=""
+           class="absolute inset-0 -z-20 h-full w-full object-cover" />
+      <div class="absolute inset-0 -z-10 bg-forest-950/85"></div>
+
+      <div class="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+        <p class="text-xs font-extrabold uppercase tracking-[0.24em] text-sun-300">Wholesale · Retail</p>
+        <h2 class="mt-4 font-display text-4xl font-semibold leading-[1.08] tracking-tight text-balance sm:text-5xl lg:text-6xl">
+          Tell us what quantity you need.
+        </h2>
+        <p class="mx-auto mt-5 max-w-2xl text-base leading-7 text-white/75 sm:text-lg">
+          Need eggs for your home, shop or a regular supply? Send a quick WhatsApp message or call us
+          and ask about today's availability and pricing.
+        </p>
+        <div class="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
+          <a href="https://wa.me/919869046103?text=Hello%20Tressto%20Poultry%20Farm%2C%20I%20want%20to%20know%20today%27s%20egg%20availability%20and%20price."
+             target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center justify-center gap-2.5 rounded-full bg-sun-400 px-8 py-4 text-base font-extrabold text-forest-950 shadow-lg shadow-black/25 transition hover:-translate-y-0.5 hover:bg-sun-300">
+            <svg class="size-5" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+            Ask on WhatsApp
+          </a>
+          <a href="tel:+919869046103"
+             class="inline-flex items-center justify-center gap-2.5 rounded-full border border-white/30 px-8 py-4 text-base font-bold transition hover:border-white/60 hover:bg-white/10">
+            <svg class="size-5" aria-hidden="true"><use href="#i-phone"/></svg>
+            +91 98690 46103
+          </a>
+        </div>
+        <p class="mt-6 text-sm text-white/55">Open every day, 6:00 AM – 8:00 PM</p>
+      </div>
+    </section>
+
+    <!-- ============================== CONTACT / LOCATION ============================== -->
+    <section id="contact" class="bg-white py-20 sm:py-24 lg:py-32">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-10">
+          <div class="lg:col-span-5">
+            <p class="text-xs font-extrabold uppercase tracking-[0.24em] text-leaf-600">Visit / Contact</p>
+            <h2 class="mt-4 font-display text-4xl font-semibold leading-[1.08] tracking-tight text-forest-900 text-balance sm:text-5xl">
+              Let's talk poultry supply.
+            </h2>
+            <p class="mt-5 max-w-md text-base leading-7 text-forest-950/65">
+              Call, WhatsApp or visit us at the farm in Bhanang, Tala.
+            </p>
+
+            <ul class="mt-10 divide-y divide-cream-200 border-y border-cream-200">
+              <li class="flex gap-4 py-5">
+                <span class="grid size-11 shrink-0 place-items-center rounded-xl bg-forest-50 text-forest-700"><svg class="size-5" aria-hidden="true"><use href="#i-pin"/></svg></span>
+                <div class="min-w-0">
+                  <p class="text-xs font-bold uppercase tracking-[0.16em] text-forest-950/45">Address</p>
+                  <address class="mt-1 font-semibold not-italic leading-relaxed text-forest-900">
+                    Tressto Poultry Farm, Bhanang,<br class="hidden sm:inline" />
+                    Indapur – Tala Road, Tala, Raigad,<br class="hidden sm:inline" />
+                    Maharashtra 402111
+                  </address>
+                </div>
+              </li>
+              <li class="flex gap-4 py-5">
+                <span class="grid size-11 shrink-0 place-items-center rounded-xl bg-forest-50 text-forest-700"><svg class="size-5" aria-hidden="true"><use href="#i-phone"/></svg></span>
+                <div class="min-w-0">
+                  <p class="text-xs font-bold uppercase tracking-[0.16em] text-forest-950/45">Phone</p>
+                  <a href="tel:+919869046103" class="mt-1 block font-semibold text-forest-900 transition hover:text-leaf-600">098690 46103</a>
+                </div>
+              </li>
+              <li class="flex gap-4 py-5">
+                <span class="grid size-11 shrink-0 place-items-center rounded-xl bg-forest-50 text-forest-700"><svg class="size-5" aria-hidden="true"><use href="#i-whatsapp"/></svg></span>
+                <div class="min-w-0">
+                  <p class="text-xs font-bold uppercase tracking-[0.16em] text-forest-950/45">WhatsApp</p>
+                  <a href="https://wa.me/919869046103?text=Hello%20Tressto%20Poultry%20Farm%2C%20I%20would%20like%20to%20enquire%20about%20eggs."
+                     target="_blank" rel="noopener noreferrer" class="mt-1 block font-semibold text-forest-900 transition hover:text-leaf-600">+91 98690 46103</a>
+                </div>
+              </li>
+              <li class="flex gap-4 py-5">
+                <span class="grid size-11 shrink-0 place-items-center rounded-xl bg-forest-50 text-forest-700"><svg class="size-5" aria-hidden="true"><use href="#i-clock"/></svg></span>
+                <div class="min-w-0">
+                  <p class="text-xs font-bold uppercase tracking-[0.16em] text-forest-950/45">Opening hours</p>
+                  <p class="mt-1 font-semibold text-forest-900">Monday – Sunday · 6:00 AM – 8:00 PM</p>
+                </div>
+              </li>
+              <li class="flex gap-4 py-5">
+                <span class="grid size-11 shrink-0 place-items-center rounded-xl bg-forest-50 text-forest-700"><svg class="size-5" aria-hidden="true"><use href="#i-globe"/></svg></span>
+                <div class="min-w-0">
+                  <p class="text-xs font-bold uppercase tracking-[0.16em] text-forest-950/45">Website</p>
+                  <a href="https://toresstopoultryfarm.vercel.app/" target="_blank" rel="noopener noreferrer" class="mt-1 block break-all font-semibold text-forest-900 transition hover:text-leaf-600">toresstopoultryfarm.vercel.app</a>
+                </div>
+              </li>
+            </ul>
+
+            <div class="mt-8 grid gap-3 sm:grid-cols-2">
+              <a href="https://www.google.com/maps/dir/?api=1&amp;destination=18.267772,73.1708836"
+                 target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center justify-center gap-2 rounded-full bg-forest-800 px-6 py-4 text-sm font-bold text-white transition hover:bg-forest-700">
+                <svg class="size-4" aria-hidden="true"><use href="#i-pin"/></svg>
+                Get directions
+              </a>
+              <a href="https://wa.me/919869046103?text=Hello%20Tressto%20Poultry%20Farm%2C%20I%20would%20like%20to%20enquire%20about%20eggs."
+                 target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center justify-center gap-2 rounded-full bg-sun-400 px-6 py-4 text-sm font-extrabold text-forest-950 transition hover:bg-sun-300">
+                <svg class="size-4" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+                WhatsApp us
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7">
+            <div class="flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-cream-200 bg-cream-100 shadow-xl shadow-forest-950/10">
+              <div class="flex items-center justify-between gap-4 border-b border-cream-200 bg-white px-5 py-4 sm:px-6">
+                <div class="min-w-0">
+                  <p class="text-xs font-bold uppercase tracking-[0.16em] text-leaf-600">Find us</p>
+                  <p class="mt-0.5 truncate font-display text-lg font-semibold text-forest-900 sm:text-xl">Bhanang, Tala · Raigad</p>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&amp;query=18.267772%2C73.1708836"
+                   target="_blank" rel="noopener noreferrer"
+                   class="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-cream-300 px-4 py-2 text-xs font-bold text-forest-900 transition hover:border-forest-700">
+                  Open in Maps
+                  <svg class="size-3.5" aria-hidden="true"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+              <iframe title="Map showing the location of Tressto Poultry Farm, Bhanang, Tala"
+                      src="https://www.google.com/maps?q=18.267772,73.1708836&amp;z=16&amp;hl=en&amp;output=embed"
+                      class="block h-[22rem] w-full flex-1 border-0 sm:h-[28rem] lg:h-auto lg:min-h-[32rem]"
+                      loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-[#0d261c] text-white">
-    <div class="mx-auto max-w-7xl px-5 py-12 sm:px-8 lg:px-10">
-      <div class="grid gap-10 md:grid-cols-[1.3fr_.7fr_.9fr]">
-        <div>
-          <div>
-            <img src="assets/tressto-logo.png"
-                 alt="Tressto Poultry Farm logo"
-                 class="h-16 w-auto rounded-xl bg-white px-2 py-1"
-                 width="1953" height="805"
-                 loading="lazy" decoding="async" />
-          </div>
-          <p class="mt-5 max-w-md text-sm leading-7 text-white/55">
+  <!-- ============================== FOOTER ============================== -->
+  <footer class="bg-forest-950 text-white">
+    <div class="mx-auto max-w-7xl px-4 pb-10 pt-16 sm:px-6 lg:px-8 lg:pt-20">
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-12">
+        <div class="lg:col-span-5">
+          <a href="#home" class="inline-flex items-center gap-3" aria-label="Tressto Poultry Farm – back to top">
+            <img src="assets/images/logo/tressto-emblem-192.png" alt="" width="192" height="192" loading="lazy"
+                 class="size-14 rounded-full bg-white p-0.5" />
+            <span class="leading-none">
+              <span class="block font-display text-2xl font-semibold">Tressto</span>
+              <span class="mt-1 block text-[0.6875rem] font-bold uppercase tracking-[0.22em] text-sun-300">Poultry Farm</span>
+            </span>
+          </a>
+          <p class="mt-6 max-w-sm text-sm leading-7 text-white/60">
             Quality poultry products with a focus on hygiene, healthy farming practices and consistent quality.
             Wholesale and retail orders welcome.
           </p>
+          <p class="mt-4 font-display text-sm italic text-white/45">Fresh · Reliable · Local</p>
         </div>
 
-        <div>
-          <p class="text-sm font-black uppercase tracking-widest text-amber-300">Quick links</p>
-          <div class="mt-4 grid gap-3 text-sm text-white/60">
-            <a href="#about" class="hover:text-white">About</a>
-            <a href="#products" class="hover:text-white">Supply</a>
-            <a href="#gallery" class="hover:text-white">Gallery</a>
-            <a href="#contact" class="hover:text-white">Contact</a>
-          </div>
-        </div>
+        <nav aria-label="Footer" class="lg:col-span-3">
+          <p class="text-xs font-extrabold uppercase tracking-[0.2em] text-sun-300">Explore</p>
+          <ul class="mt-5 grid grid-cols-2 gap-x-6 gap-y-3 text-sm text-white/65 lg:grid-cols-1">
+            <li><a href="#about" class="transition hover:text-white">About</a></li>
+            <li><a href="#supply" class="transition hover:text-white">Wholesale &amp; Retail</a></li>
+            <li><a href="#farm" class="transition hover:text-white">Our Farm</a></li>
+            <li><a href="#videos" class="transition hover:text-white">Videos</a></li>
+            <li><a href="#gallery" class="transition hover:text-white">Gallery</a></li>
+            <li><a href="#contact" class="transition hover:text-white">Contact</a></li>
+          </ul>
+        </nav>
 
-        <div>
-          <p class="text-sm font-black uppercase tracking-widest text-amber-300">Contact</p>
-          <div class="mt-4 grid gap-3 text-sm text-white/60">
-            <a href="tel:+919869046103" class="hover:text-white">098690 46103</a>
-            <a href="https://wa.me/919869046103" target="_blank" rel="noopener noreferrer" class="hover:text-white">WhatsApp</a>
-            <a href="https://www.google.com/maps?q=18.267772,73.1708836&z=17&hl=en" target="_blank" rel="noopener noreferrer" class="hover:text-white">Bhanang, Tala, Maharashtra</a>
-          </div>
+        <div class="md:col-span-2 lg:col-span-4">
+          <p class="text-xs font-extrabold uppercase tracking-[0.2em] text-sun-300">Contact</p>
+          <ul class="mt-5 space-y-3.5 text-sm text-white/65">
+            <li><a href="tel:+919869046103" class="inline-flex items-center gap-3 transition hover:text-white"><svg class="size-4 shrink-0 text-sun-300" aria-hidden="true"><use href="#i-phone"/></svg>098690 46103</a></li>
+            <li><a href="https://wa.me/919869046103?text=Hello%20Tressto%20Poultry%20Farm%2C%20I%20would%20like%20to%20enquire%20about%20eggs." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 transition hover:text-white"><svg class="size-4 shrink-0 text-sun-300" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp +91 98690 46103</a></li>
+            <li><a href="https://www.google.com/maps/search/?api=1&amp;query=18.267772%2C73.1708836" target="_blank" rel="noopener noreferrer" class="inline-flex items-start gap-3 transition hover:text-white"><svg class="mt-0.5 size-4 shrink-0 text-sun-300" aria-hidden="true"><use href="#i-pin"/></svg>Bhanang, Indapur – Tala Road, Tala, Raigad, Maharashtra 402111</a></li>
+            <li class="inline-flex items-center gap-3"><svg class="size-4 shrink-0 text-sun-300" aria-hidden="true"><use href="#i-clock"/></svg>Mon – Sun · 6:00 AM – 8:00 PM</li>
+          </ul>
         </div>
       </div>
 
-      <div class="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between">
-        <p>© <span id="year"></span> Tressto Poultry Farm. All rights reserved.</p>
-        <p>Photography: Tressto Poultry Farm</p>
+      <div class="mt-14 flex flex-col gap-2 border-t border-white/10 pt-6 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between">
+        <p>© <span id="year">2026</span> Tressto Poultry Farm. All rights reserved.</p>
+        <p>Photography &amp; video: Tressto Poultry Farm</p>
       </div>
     </div>
   </footer>
 
-  <!-- Small interaction only; no custom CSS -->
+  <!-- Floating WhatsApp (appears after the hero) -->
+  <a id="floatWa" href="https://wa.me/919869046103?text=Hello%20Tressto%20Poultry%20Farm%2C%20I%20would%20like%20to%20enquire%20about%20eggs."
+     target="_blank" rel="noopener noreferrer" aria-label="Chat with Tressto Poultry Farm on WhatsApp"
+     class="pointer-events-none fixed bottom-4 right-4 z-40 grid size-14 translate-y-4 place-items-center rounded-full bg-[#25D366] text-white opacity-0 shadow-lg shadow-black/25 transition duration-300 hover:scale-105 data-[show=true]:pointer-events-auto data-[show=true]:translate-y-0 data-[show=true]:opacity-100 sm:bottom-6 sm:right-6">
+    <svg class="size-7" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+  </a>
+
+  <!-- Gallery lightbox -->
+  <dialog id="lightbox" aria-label="Photo viewer"
+          class="m-0 h-full max-h-none w-full max-w-none bg-transparent p-0 backdrop:bg-forest-950/95">
+    <div class="flex h-full w-full flex-col items-center justify-center gap-4 p-4 sm:p-8" data-lightbox-backdrop>
+      <figure class="flex max-h-full min-h-0 w-full max-w-5xl flex-col items-center">
+        <img id="lightboxImg" alt="" class="max-h-[78svh] min-h-0 w-auto max-w-full rounded-xl object-contain shadow-2xl" />
+        <figcaption id="lightboxCaption" class="mt-4 text-center text-sm font-medium text-white/80"></figcaption>
+      </figure>
+      <div class="flex items-center gap-3">
+        <button type="button" id="lightboxPrev" aria-label="Previous photo" class="grid size-12 place-items-center rounded-full bg-white/10 text-white transition hover:bg-white/20"><svg class="size-5" aria-hidden="true"><use href="#i-chev-left"/></svg></button>
+        <span id="lightboxCount" class="min-w-16 text-center text-xs font-semibold tabular-nums text-white/60"></span>
+        <button type="button" id="lightboxNext" aria-label="Next photo" class="grid size-12 place-items-center rounded-full bg-white/10 text-white transition hover:bg-white/20"><svg class="size-5" aria-hidden="true"><use href="#i-chev-right"/></svg></button>
+      </div>
+    </div>
+    <button type="button" id="lightboxClose" aria-label="Close photo viewer" class="fixed right-4 top-4 grid size-12 place-items-center rounded-full bg-white/10 text-white transition hover:bg-white/20 sm:right-6 sm:top-6"><svg class="size-5" aria-hidden="true"><use href="#i-close"/></svg></button>
+  </dialog>
+
   <script>
-    const menuBtn = document.getElementById("menuBtn");
-    const mobileMenu = document.getElementById("mobileMenu");
+    (function () {
+      const header = document.getElementById("siteHeader");
+      const menuBtn = document.getElementById("menuBtn");
+      const menu = document.getElementById("mobileMenu");
+      const iconOpen = document.getElementById("menuIconOpen");
+      const iconClose = document.getElementById("menuIconClose");
+      const floatWa = document.getElementById("floatWa");
+      const hero = document.getElementById("home");
 
-    menuBtn.addEventListener("click", () => {
-      const isHidden = mobileMenu.classList.toggle("hidden");
-      menuBtn.setAttribute("aria-expanded", String(!isHidden));
-    });
+      // Header background + floating WhatsApp visibility on scroll
+      const onScroll = () => {
+        header.dataset.scrolled = String(window.scrollY > 24);
+        floatWa.dataset.show = String(window.scrollY > hero.offsetHeight * 0.8);
+      };
+      onScroll();
+      window.addEventListener("scroll", onScroll, { passive: true });
 
-    mobileMenu.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        mobileMenu.classList.add("hidden");
-        menuBtn.setAttribute("aria-expanded", "false");
+      // Mobile menu
+      const setMenu = (open) => {
+        menu.classList.toggle("hidden", !open);
+        header.dataset.menu = open ? "open" : "closed";
+        menuBtn.setAttribute("aria-expanded", String(open));
+        menuBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+        iconOpen.classList.toggle("hidden", open);
+        iconClose.classList.toggle("hidden", !open);
+      };
+      menuBtn.addEventListener("click", () => setMenu(menu.classList.contains("hidden")));
+      menu.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setMenu(false)));
+      document.addEventListener("keydown", (e) => { if (e.key === "Escape") setMenu(false); });
+      window.matchMedia("(min-width: 1024px)").addEventListener("change", (e) => { if (e.matches) setMenu(false); });
+
+      // Videos: play on demand, native controls after start, one at a time
+      const videos = [];
+      document.querySelectorAll("[data-video]").forEach((wrap) => {
+        const video = wrap.querySelector("video");
+        const btn = wrap.querySelector("[data-video-play]");
+        videos.push(video);
+        btn.addEventListener("click", () => {
+          btn.remove();
+          video.controls = true;
+          video.play().catch(() => {});
+        });
+        video.addEventListener("play", () => videos.forEach((v) => { if (v !== video) v.pause(); }));
       });
-    });
 
-    document.getElementById("year").textContent = new Date().getFullYear();
+      // Gallery lightbox
+      const dialog = document.getElementById("lightbox");
+      const lbImg = document.getElementById("lightboxImg");
+      const lbCap = document.getElementById("lightboxCaption");
+      const lbCount = document.getElementById("lightboxCount");
+      const items = Array.from(document.querySelectorAll("[data-lightbox]"));
+      let current = 0;
+      const show = (i) => {
+        current = (i + items.length) % items.length;
+        const item = items[current];
+        lbImg.src = item.dataset.lightbox;
+        lbImg.alt = item.querySelector("img").alt;
+        lbCap.textContent = item.dataset.caption || "";
+        lbCount.textContent = (current + 1) + " / " + items.length;
+      };
+      items.forEach((item, i) => item.addEventListener("click", () => { show(i); dialog.showModal(); }));
+      document.getElementById("lightboxPrev").addEventListener("click", () => show(current - 1));
+      document.getElementById("lightboxNext").addEventListener("click", () => show(current + 1));
+      document.getElementById("lightboxClose").addEventListener("click", () => dialog.close());
+      dialog.addEventListener("click", (e) => { if (e.target.hasAttribute("data-lightbox-backdrop")) dialog.close(); });
+      dialog.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowLeft") show(current - 1);
+        if (e.key === "ArrowRight") show(current + 1);
+      });
+
+      // Subtle reveal on scroll (skipped when the user prefers reduced motion)
+      const revealEls = document.querySelectorAll("[data-reveal]");
+      if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        const hiddenCls = ["opacity-0", "translate-y-6"];
+        revealEls.forEach((el) => el.classList.add("transition", "duration-700", "ease-out", ...hiddenCls));
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.remove(...hiddenCls);
+              io.unobserve(entry.target);
+            }
+          });
+        }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+        revealEls.forEach((el) => io.observe(el));
+      }
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+    })();
   </script>
-
 </body>
 </html>
